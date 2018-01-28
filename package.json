@@ -15,6 +15,9 @@
   ],
   "author": "Levi Tomes",
   "license": "GNU",
+  "dependencies": {
+    "kindle": "git+https://github.com/ltomes/kindle.git"
+  },
   "bugs": {
     "url": "https://github.com/ltomes/loggo/issues"
   },

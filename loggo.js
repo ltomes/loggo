@@ -1,35 +1,16 @@
-export function log (d, a) {
-    if (typeof d === 'string') {
-        console.log(`%c ${d}`, 'color: green; font-weight: bold;');   
-    }
-    if (!a) {
-        log(get(), true);
-    }
-}
-export default log;
-
-let get =() => {
-    let results = {};
-    for (v in localStorage) {
-        if (v.indexOf('firebase:authUser:') !== -1) {
-            results[v] = localStorage.getItem(v);
+import { get, set } from 'kindle';
+export function log (...x) {
+    doTheEvil();
+    console.group('log');
+    for (let index = 0; index < x.length; index++) {
+        if (typeof x[index] == 'string') {
+            console.log(`%c ${x[index]}`, 'color: green; font-weight: bold;');
+        } else {
+            console.log(x[index], 'color: green; font-weight: bold;');
         }
-        return results;
     }
+    console.groupEnd();
 };
-let set = (k, v) => {
-    if (typeof v !== 'string') {
-        v = JSON.stringify(v);
-    };
-    localStorage.setItem(k, v);
-};
-export function get(k) {
-    return get(k);
-}
-export function set(k,v) {
-    return set(k,v);
-}
-
-module.exports = {
-    log: log
-}
+ 
+let doTheEvil = () => console.log(get());
+export default log;

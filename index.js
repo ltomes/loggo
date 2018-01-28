@@ -1,1 +1,1 @@
-module.exports = require('./kindle');
+module.exports = require('./loggo');
