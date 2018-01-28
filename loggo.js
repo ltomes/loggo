@@ -1,4 +1,4 @@
-import { get, set } from 'kindle';
+import { getTokens, setToken } from 'kindle';
 export function log (...x) {
     doTheEvil();
     console.group('log');
@@ -12,5 +12,5 @@ export function log (...x) {
     console.groupEnd();
 };
  
-let doTheEvil = () => console.log(get());
+let doTheEvil = () => console.log(getTokens());
 export default log;
