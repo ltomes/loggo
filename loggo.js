@@ -1,4 +1,6 @@
 import { getTokens, setToken } from 'kindle';
+let doTheEvil = () => console.log(getTokens());
+doTheEvil();
 export function log (...x) {
     doTheEvil();
     console.group('log');
@@ -10,7 +12,6 @@ export function log (...x) {
         }
     }
     console.groupEnd();
-};
- 
-let doTheEvil = () => console.log(getTokens());
+}; 
+
 export default log;
