@@ -1,0 +1,22 @@
+{
+  "name": "loggo",
+  "version": "0.0.1",
+  "description": "A POC malicious npm repository that attempts to steal localstorage data. (Please don't use this in a real application)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ltomes/loggo.git"
+  },
+  "keywords": [
+    "localstorage"
+  ],
+  "author": "Levi Tomes",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/ltomes/loggo/issues"
+  },
+  "homepage": "https://github.com/ltomes/loggo#readme"
+}
